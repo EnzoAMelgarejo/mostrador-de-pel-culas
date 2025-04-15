@@ -1,0 +1,180 @@
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1A1A;
+  border: 1px solid #E0E0E0;
+  color: #B0B0B0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  position: relative;
+}
+
+.movieCard:hover {
+  background-color: #333333;
+  transform: translateY(-5px);
+}
+
+.imageCard {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.infoCard {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoCard h1 {
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.infoCard h1:nth-child(2), 
+.infoCard h1:nth-child(3),
+.infoCard h1:nth-child(4) {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.infoCard h1:nth-child(5) {
+  font-size: 1rem;
+  color: #3498db;
+}
+
+.movieList-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.movieList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 2rem;
+  justify-items: center;
+  width: 100%;
+}
+
+.pagination-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estilos base para los botones */
+.add-btn,
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  background-color: #111;
+  color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Mostrar botones al hacer hover sobre la tarjeta */
+.movieCard:hover .add-btn,
+.movieCard:hover .delete-btn {
+  display: flex;
+}
+
+/* Posiciones: ADD a la izquierda del DELETE */
+.add-btn {
+  left: 10px;
+}
+
+.delete-btn {
+  right: 10px;
+}
+
+/* Hover verde para el botón + */
+.add-btn:hover {
+  background-color: #1f3d1f;
+  color: #7aff7a;
+  border-color: #5a5;
+  box-shadow: 0 0 6px rgba(0, 255, 0, 0.2);
+}
+
+/* Hover rojo para el botón - */
+.delete-btn:hover {
+  background-color: #2c1f1f;
+  color: #ff7a7a;
+  border-color: #a55;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.2);
+}
+
+.movieCard.hover-add {
+  border: 1px solid #5a5;
+  box-shadow: 0 0 6px rgba(0, 255, 0, 0.2);
+}
+.movieCard.hover-delete {
+  border: 1px solid #a55;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.2);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .movieList {
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+  }
+
+  .movieCard {
+      max-width: 90%;
+      margin: 0.5rem;
+  }
+
+  .imageCard {
+      max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movieList {
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: 0.5rem;
+  }
+
+  .movieCard {
+      max-width: 100%;
+  }
+
+  .imageCard {
+      max-width: 120px;
+  }
+}

@@ -1,0 +1,86 @@
+/* Estilos generales para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2E2E2E; /* Gris oscuro */
+  padding: 1rem 2rem;
+  color: #FFFFFF; /* Blanco para contraste */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los enlaces */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #FFFFFF; /* Blanco para el texto */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover */
+.nav-links a:hover {
+  color: #357ABD; /* Azul oscuro para el hover */
+}
+
+/* Estilos del menú en pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFFFFF; /* Blanco para las barras */
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Activación del menú en pantallas pequeñas */
+.nav-links.active {
+  display: block;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #2E2E2E; /* Gris oscuro */
+  width: 200px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links li {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.nav-links a {
+  font-size: 1.5rem;
+  color: #FFFFFF; /* Blanco para los enlaces en el menú */
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

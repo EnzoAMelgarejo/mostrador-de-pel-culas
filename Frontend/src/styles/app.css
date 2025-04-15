@@ -1,0 +1,79 @@
+/* Estructura general de la aplicación */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  }
+  
+  /* Estilo de contenido principal */
+  .main-content {
+    flex: 1; /* Ocupa el espacio restante */
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .main-content h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .main-content p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+  }
+  
+  /* Estilo para el Footer */
+  .footer {
+    background-color: #2c3e50; /* Color oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra en el footer */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Botones */
+  .btn-primary {
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #357ABD;
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* Deshabilitado */
+    cursor: not-allowed;
+  }
+  
+  /* Estilos responsive (opcional) */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    .main-content {
+      padding: 1rem;
+    }
+  }
+  

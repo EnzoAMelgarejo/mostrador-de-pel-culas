@@ -1,0 +1,27 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(26, 26, 26, 0.6); /* Fondo suave y oscuro para contraste */
+  }
+  
+  .spinner {
+    border: 4px solid rgba(176, 176, 176, 0.3); /* Gris medio para el borde */
+    border-top: 4px solid #4A90E2; /* Azul vibrante para la animación */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Animación de giro del spinner */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

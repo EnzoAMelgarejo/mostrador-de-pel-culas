@@ -1,0 +1,33 @@
+.list-selector {
+    background-color: #2E2E2E; /* Gris oscuro */
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-selector select {
+    background-color: #1A1A1A; /* Negro suave */
+    color: #FFFFFF; /* Texto blanco */
+    border: 1px solid #4A90E2; /* Azul vibrante */
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.list-selector select:hover {
+    border-color: #357ABD; /* Azul oscuro */
+}
+
+.list-selector option {
+    background-color: #2E2E2E; /* Gris oscuro */
+    color: #B0B0B0; /* Gris medio */
+}
+
+.list-selector select:focus {
+    outline: none;
+    border-color: #4A90E2; /* Azul vibrante */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
